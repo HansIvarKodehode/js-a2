@@ -187,7 +187,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 
 // Skriv koden for oppgave 5 her
 console.log("---------------");
-console.log(`task ${task++}`);
+console.log(`task ${task}`);
 
 function vanskeligToGoy(str) {
   //   let i = 0;
@@ -249,14 +249,20 @@ function vanskeligToGoy(str) {
   //   console.log(streamlined);
   return streamlined;
 }
-let m = "  Javascript er vanskelig   ";
+let m1 = "  Javascript er vanskelig   ";
 let m2 = " Det er vanskelig å bruke metoder ";
 let m3 = "   vanskelig        ";
 // vanskeligToGoy(m);
-console.log(vanskeligToGoy(m));
+console.log(vanskeligToGoy(m1));
 console.log(vanskeligToGoy(m2));
 console.log(vanskeligToGoy(m3));
 // just for the record: this iterates over the string 3 times. That is not mega effective
+console.log("---------------");
+console.log(`task ${task++}, addendum.`);
+console.log(
+  "apparently there are built in functions for this in javascript. more specifically: .replace() would save one whole iteration by itself, and one more since we could just do the whole job with just one for loop.",
+);
+
 console.log("---------------");
 
 /******************************************************************************

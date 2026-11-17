@@ -211,9 +211,9 @@ function vanskeligToGoy(str) {
   //   console.log(firstLetter, lastLetter);
 
   for (let i = 0; i < str.length - 8; i++) {
-    // find out where "vanskelig er"
+    // find out where "vanskelig" er
     if (
-      str[i] == "v" &&
+      str[i + 0] == "v" &&
       str[i + 1] == "a" &&
       str[i + 2] == "n" &&
       str[i + 3] == "s" &&
@@ -258,11 +258,20 @@ console.log(vanskeligToGoy(m2));
 console.log(vanskeligToGoy(m3));
 // just for the record: this iterates over the string 3 times. That is not mega effective
 console.log("---------------");
+console.log("---------------");
 console.log(`task ${task++}, addendum.`);
 console.log(
-  "apparently there are built in functions for this in javascript. more specifically: .replace() would save one whole iteration by itself, and one more since we could just do the whole job with just one for loop.",
+  "apparently there are built in functions for this in javascript. more specifically: .replace() would save one whole iteration by itself, and one more since we could just do the whole job with just one for loop. .trim() doesn't edit the original, but maybe...",
 );
-
+console.log("let's try an improved version");
+let mList = [m1, m2, m3];
+for (m in mList) {
+  mList[m] = mList[m].trim();
+  mList[m] = mList[m].replace("vanskelig", "gøy");
+  console.log(mList[m]);
+}
+console.log("whelp. that's what I get for re-inventing the wheel... ");
+console.log("or .trim() and .replace()");
 console.log("---------------");
 
 /******************************************************************************

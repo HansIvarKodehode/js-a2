@@ -307,38 +307,16 @@ items.shift();
 console.log(items);
 
 // step 2
-for (i in items) {
-  if (items[i] == "Viskelær") {
-    items[i] = "Linjal";
-  }
-}
+items.splice(2, 1, "Linjal");
 console.log(items);
 
-// step 3. Replace one, splice the other
-let notatIndex;
-let pennIndex;
-for (i in items) {
-  if (items[i] == "Penn") {
-    pennIndex = i;
-  }
-  if (items[i] == "Notatbok") {
-    notatIndex = i;
-  }
-}
-items[pennIndex] = "Markeringspenn";
-items.splice(notatIndex, 1);
+// step 3
+items.splice(0, 2, "Markeringspenn");
 console.log(items);
 
 // step 4
-let stringed = "";
-for (i in items) {
-  if (i == items.length - 1) {
-    stringed += items[i];
-  } else {
-    stringed += items[i] + " | ";
-  }
-}
-console.log(stringed);
+let strItems = items.join(" | ");
+console.log(strItems);
 
 console.log("---------------");
 console.log(`task ${task++}, extra`);

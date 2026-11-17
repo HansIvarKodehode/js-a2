@@ -437,6 +437,7 @@ function sunglasses(input) {
   }
 }
 console.log(sunglasses("hello"));
+console.log(sunglasses("22"));
 console.log(sunglasses(2.2222));
 console.log(sunglasses(true));
 console.log(sunglasses(null));

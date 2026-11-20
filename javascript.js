@@ -264,11 +264,17 @@ console.log(
   "apparently there are built in functions for this in javascript. more specifically: .replace() would save one whole iteration by itself, and one more since we could just do the whole job with just one for loop. .trim() doesn't edit the original, but maybe...",
 );
 console.log("let's try an improved version");
+
+function vtg(string) {
+  string = string.trim();
+  string = string.replace("vanskelig", "gøy");
+  return string;
+}
+
 let mList = [m1, m2, m3];
 for (m in mList) {
-  mList[m] = mList[m].trim();
-  mList[m] = mList[m].replace("vanskelig", "gøy");
-  console.log(mList[m]);
+  let result = vtg(mList[m]);
+  console.log(result);
 }
 console.log("whelp. that's what I get for re-inventing the wheel... ");
 console.log("or .trim() and .replace()");
